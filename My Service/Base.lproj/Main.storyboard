@@ -95,7 +95,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nmN-yg-HRp"/>
-                                    <barButtonItem title="Save New User To Server" id="jK0-e9-BZ6"/>
+                                    <barButtonItem title="Save New User To Server" id="jK0-e9-BZ6">
+                                        <connections>
+                                            <action selector="saveButton:" destination="TCX-Aq-Vvd" id="cc9-Q0-bXq"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="shB-IM-n5C"/>
                                 </items>
                             </toolbar>
@@ -126,6 +130,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="xh2-fn-e3D" id="JxU-uz-LE4"/>
+                        <outlet property="passwordTextField" destination="vaa-9Q-qCo" id="ynr-P1-5fa"/>
+                        <outlet property="userTextField" destination="99T-KF-gWc" id="1ie-lz-84T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRX-rn-g43" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

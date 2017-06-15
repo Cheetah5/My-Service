@@ -10,6 +10,40 @@ import UIKit
 
 class AddNewUserViewController: UIViewController {
 
+    //Field decoration
+    var nameString: String? = nil
+    var userString: String? = nil
+    var passwordString: String? = nil
+   
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+        
+        //Get value from Textfield
+        nameString = nameTextField.text
+        userString = userTextField.text
+        passwordString = passwordTextField.text
+        //check empty input
+        let intName = nameString?.characters.count
+        let intUser = userString?.characters.count
+        let intPassword = passwordString?.characters.count
+        
+        
+        if (intName == 0) || (intUser == 0) || (intPassword == 0) {
+            print("Have empty input!!!")
+        } else {
+        
+        print("No empty input!!!")
+}
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var userTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
