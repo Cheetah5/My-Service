@@ -37,8 +37,7 @@ class ViewController: UIViewController {
                 print("strJSON ==> \(strJSON)")
             
                          }
-        
-                
+               
                 
         }// if1
         
