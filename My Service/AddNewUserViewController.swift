@@ -15,15 +15,20 @@ class AddNewUserViewController: UIViewController {
     var userString: String? = nil
     var passwordString: String? = nil
    
+    @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var userTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+ 
     
     @IBAction func saveButton(_ sender: Any) {
-        
         //Get value from Textfield
         nameString = nameTextField.text
         userString = userTextField.text
         passwordString = passwordTextField.text
-        //check empty input
+
+               //check empty input
         let intName = nameString?.characters.count
         let intUser = userString?.characters.count
         let intPassword = passwordString?.characters.count
@@ -35,13 +40,9 @@ class AddNewUserViewController: UIViewController {
         
         print("No empty input!!!")
 }
+    }
     
-    @IBOutlet weak var nameTextField: UITextField!
-    
-    @IBOutlet weak var userTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
-    
+      
     
     
     override func viewDidLoad() {
@@ -57,6 +58,7 @@ class AddNewUserViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }//didrecive
-    
+   
+
 
 }//Main Class
