@@ -48,10 +48,8 @@ class AddNewUserViewController: UIViewController {
             
         }
 
-    
-    
+      
     }//Save Buttom
-    
     
     
     override func viewDidLoad() {
@@ -91,11 +89,19 @@ class AddNewUserViewController: UIViewController {
             }// if1
             
             
-        }   //Main Method
+        }
         task.resume()
+    performSegue(withIdentifier: "BackHome", sender: self)
         
-        
-    }//Upload Value To Server
+    }// End Upload Value To Server
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goHome" {
+            if let destination = segue.destination as? ViewController {
+                destination.myString = (sender as? String)!
+            }
+        }//if
+    }
     
     
     

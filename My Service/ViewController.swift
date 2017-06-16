@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-   
+   //Explicit
+    var myString = ""
     
     
     
