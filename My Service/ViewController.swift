@@ -77,11 +77,36 @@ class ViewController: UIViewController {
                     let strJSON = dataString as Any
                     print("strJSON ==> \(strJSON)")
                     
-            let strKey = ","
-                    if let myContentArray = dataString?.components(separatedBy: strKey){
+//                    if dataString != nil {
+//                        print("dataString Not nil")
+//                 
+//                    }   else{
+//                        print("dataString is nil")
+//                    
+//                    }
                     
-                        print("myContentArray[2] ==> \(myContentArray[2])")
-                        print("myContentArray[3] ==> \(myContentArray[3])")
+                    
+                    
+                let strKey = ","
+                if let myContentArray = dataString?.components(separatedBy: strKey){
+                    
+                    print("myContentArray[2] ==> \(myContentArray[2])")
+                    print("myContentArray[3] ==> \(myContentArray[3])")
+                        
+                        
+                    //Check Password
+                    let myPassword = "\"Password\":\"" + self.strPassword! + "\"}]"
+                    if myPassword == myContentArray[3]{
+                        //Correct Password
+                        print("Correct Password")
+                        
+                        performSegue(withIdentifier: "GotoMap", sender: "self")
+                        
+                    }    else{
+                        //Incorrect Password
+                    print("Incorrect Password")
+                    }
+                        
                         
                     
                     }   //if

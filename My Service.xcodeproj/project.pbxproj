@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F254C94F1EF387590024F3F6 /* ic_keyboard_arrow_left_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F254C94E1EF387590024F3F6 /* ic_keyboard_arrow_left_2x.png */; };
+		F254C9511EF3D2ED0024F3F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254C9501EF3D2ED0024F3F6 /* MapViewController.swift */; };
 		F2876E731EF25CF90025F265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2876E721EF25CF90025F265 /* AppDelegate.swift */; };
 		F2876E751EF25CF90025F265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2876E741EF25CF90025F265 /* ViewController.swift */; };
 		F2876E781EF25CF90025F265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2876E761EF25CF90025F265 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		F254C94E1EF387590024F3F6 /* ic_keyboard_arrow_left_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_keyboard_arrow_left_2x.png; path = ../../../../Desktop/ic_keyboard_arrow_left_2x.png; sourceTree = "<group>"; };
+		F254C9501EF3D2ED0024F3F6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F2876E6F1EF25CF90025F265 /* My Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2876E721EF25CF90025F265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2876E741EF25CF90025F265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		F2876E661EF25CF90025F265 = {
 			isa = PBXGroup;
 			children = (
+				F254C9501EF3D2ED0024F3F6 /* MapViewController.swift */,
 				F2876E711EF25CF90025F265 /* My Service */,
 				F2876E701EF25CF90025F265 /* Products */,
 			);
@@ -162,6 +165,7 @@
 				F2876E751EF25CF90025F265 /* ViewController.swift in Sources */,
 				F2876E851EF27E170025F265 /* AddNewUserViewController.swift in Sources */,
 				F2876E731EF25CF90025F265 /* AppDelegate.swift in Sources */,
+				F254C9511EF3D2ED0024F3F6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
