@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     var myString = ""
     var strUser: String? = nil
     var strPassword: String? = nil
-    
-    
+    var strMyJSON  : String? = nil
     
     
     @IBOutlet weak var userTextField: UITextField!
@@ -39,45 +38,21 @@ class ViewController: UIViewController {
         }   else {
         
             alertLabel.alpha = 0
-        }
             
-
-    
-    
+            let strURL = "http://androidthai.in.th/snru/getUserWhereSuthira.php?isAdd=true&User="+strUser!+""
+        
+            print("strURL ==> \(strURL)")
+            readJSON(strURL: strURL)
+            
+        }
+        
     
     }   //loginButton
    
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        //Process Connected Http
-//        let urlPHP = "http://androidthai.in.th"
-//        //Change String to url String
-//        let myURL = URL(string: urlPHP)
-//        
-//        let request = NSMutableURLRequest(url: myURL!)
-//        let task = URLSession.shared.dataTask(with: request as URLRequest){
-//        data, response, error in
-//        
-//            if error != nil {
-//            print("Error ==> \(String(describing: error))")
-//            }   else {
-//                
-//                if let unwrappedData = data{
-//                let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
-//                let strJSON = dataString as Any
-//                print("strJSON ==> \(strJSON)")
-//            
-//                         }
-//                
-//        }// if1
-//        
-//    }
-//    task.resume()
         
         
 }//Main Method
@@ -101,6 +76,16 @@ class ViewController: UIViewController {
                     let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
                     let strJSON = dataString as Any
                     print("strJSON ==> \(strJSON)")
+                    
+            let strKey = ","
+                    if let myContentArray = dataString?.components(separatedBy: strKey){
+                    
+                        print("myContentArray[2] ==> \(myContentArray[2])")
+                        print("myContentArray[3] ==> \(myContentArray[3])")
+                        
+                    
+                    }   //if
+                    
                     
                 }
                 
