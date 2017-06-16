@@ -44,6 +44,8 @@ class ViewController: UIViewController {
             
     }   //Main Method
     task.resume()
+        
+        
 }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

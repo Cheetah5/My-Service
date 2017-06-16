@@ -14,21 +14,23 @@ class AddNewUserViewController: UIViewController {
     var nameString: String? = nil
     var userString: String? = nil
     var passwordString: String? = nil
-   
-    @IBOutlet weak var nameTextField: UITextField!
     
+    
+    @IBOutlet weak var alertLable: UILabel!
+
+    @IBOutlet weak var nameTextField: UITextField!
+       
     @IBOutlet weak var userTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
  
     
-    @IBAction func saveButton(_ sender: Any) {
-        //Get value from Textfield
+    @IBAction func saveButtom(_ sender: Any) {//Get value from Textfield
         nameString = nameTextField.text
         userString = userTextField.text
         passwordString = passwordTextField.text
-
-               //check empty input
+        
+        //check empty input
         let intName = nameString?.characters.count
         let intUser = userString?.characters.count
         let intPassword = passwordString?.characters.count
@@ -36,13 +38,20 @@ class AddNewUserViewController: UIViewController {
         
         if (intName == 0) || (intUser == 0) || (intPassword == 0) {
             print("Have empty input!!!")
+            alertLable.alpha = 1
         } else {
-        
-        print("No empty input!!!")
-}
-    }
+            print("No empty input!!!")
+            alertLable.alpha = 0
+            let strMyURL = "http://androidthai.in.th/snru/adduserNewly.php?isAdd=true&Name=" + nameString! + "&User=" + userString! + "&Password=" + passwordString!
+            print("strMyURL ==> \(strMyURL)")
+            uploadValueToServer(strURL: strMyURL)
+            
+        }
+
     
-      
+    
+    }//Save Buttom
+    
     
     
     override func viewDidLoad() {
@@ -54,6 +63,42 @@ class AddNewUserViewController: UIViewController {
         
     }//Main Method
 
+    
+    
+    func uploadValueToServer(strURL: String) -> Void {
+        
+        //Process Connected Http
+        let urlPHP = strURL
+        //Change String to url String
+        let myURL = URL(string: urlPHP)
+        
+        let request = NSMutableURLRequest(url: myURL!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            data, response, error in
+            
+            if error != nil {
+                print("Error ==> \(String(describing: error))")
+            }   else {
+                
+                if let unwrappedData = data{
+                    let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
+                    let strJSON = dataString as Any
+                    print("strJSON ==> \(strJSON)")
+                    
+                }
+                
+                
+            }// if1
+            
+            
+        }   //Main Method
+        task.resume()
+        
+        
+    }//Upload Value To Server
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

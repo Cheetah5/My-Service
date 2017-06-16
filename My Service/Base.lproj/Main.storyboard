@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="121585628.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="d3p-ha-vWL">
+                                <rect key="frame" x="-63" y="0.0" width="500" height="667"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvn-Cx-e1A">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -45,9 +49,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="121585628.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="d3p-ha-vWL">
-                                <rect key="frame" x="-63" y="0.0" width="500" height="667"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,64 +74,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0l-2A-XQE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-fn-e3D">
+                                <rect key="frame" x="83" y="113" width="201" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-9Q-qCo">
+                                <rect key="frame" x="83" y="222" width="201" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99T-KF-gWc">
+                                <rect key="frame" x="83" y="166" width="201" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Fill All Every Blank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-xL-Mub">
+                                <rect key="frame" x="91.5" y="285" width="192.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-em-6QY">
+                                <rect key="frame" x="0.0" y="610" width="375" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtom:" destination="TCX-Aq-Vvd" eventType="touchUpInside" id="J8c-td-lK2"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-Dx-Vb7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="AddNewUser" id="emC-aP-gIb">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_keyboard_arrow_left.png" id="8pb-zy-iH8">
+                                    <navigationItem title="AddNewUser" id="Gvj-da-XVs" userLabel="AddNewUser" colorLabel="IBBuiltInLabel-Green">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_keyboard_arrow_left_2x.png" id="cat-c7-HSy">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="4O1-3X-01h"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="tpR-36-2Ax"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXb-Pz-tsX">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nmN-yg-HRp"/>
-                                    <barButtonItem title="Save New User To Server" id="jK0-e9-BZ6">
-                                        <connections>
-                                            <action selector="saveButton:" destination="TCX-Aq-Vvd" id="cc9-Q0-bXq"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="shB-IM-n5C"/>
-                                </items>
-                            </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-fn-e3D">
-                                <rect key="frame" x="82" y="113" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-9Q-qCo">
-                                <rect key="frame" x="82" y="222" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99T-KF-gWc">
-                                <rect key="frame" x="82" y="166" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gx5-xL-Mub" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leadingMargin" constant="75.5" id="0kC-3E-Udj"/>
+                            <constraint firstItem="xh2-fn-e3D" firstAttribute="top" secondItem="IS0-Dx-Vb7" secondAttribute="bottom" constant="41" id="0uZ-Eg-ukM"/>
+                            <constraint firstItem="0m3-lm-By6" firstAttribute="top" secondItem="iRD-em-6QY" secondAttribute="bottom" constant="27" id="3Rn-q0-LWJ"/>
+                            <constraint firstItem="xh2-fn-e3D" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leadingMargin" constant="67" id="5G3-Ee-s78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vaa-9Q-qCo" secondAttribute="trailing" constant="75" id="BHb-fP-vyA"/>
+                            <constraint firstItem="vaa-9Q-qCo" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leadingMargin" constant="67" id="J8w-7z-a9u"/>
+                            <constraint firstItem="iRD-em-6QY" firstAttribute="top" secondItem="gx5-xL-Mub" secondAttribute="bottom" constant="304.5" id="KAW-Up-8li"/>
+                            <constraint firstAttribute="trailing" secondItem="IS0-Dx-Vb7" secondAttribute="trailing" id="Lfq-8G-qJ5"/>
+                            <constraint firstItem="IS0-Dx-Vb7" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leading" id="Qs3-Mz-W5T"/>
+                            <constraint firstItem="vaa-9Q-qCo" firstAttribute="top" secondItem="99T-KF-gWc" secondAttribute="bottom" constant="26" id="SSb-9T-qd9"/>
+                            <constraint firstItem="gx5-xL-Mub" firstAttribute="top" secondItem="vaa-9Q-qCo" secondAttribute="bottom" constant="33" id="VTM-ur-WUs"/>
+                            <constraint firstItem="IS0-Dx-Vb7" firstAttribute="top" secondItem="GcP-dY-Zpq" secondAttribute="bottom" constant="8" id="W3E-Fs-GdD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iRD-em-6QY" secondAttribute="trailing" constant="-16" id="XHl-3T-gsB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gx5-xL-Mub" secondAttribute="trailing" constant="75" id="ZjY-M1-dCe"/>
+                            <constraint firstItem="99T-KF-gWc" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leadingMargin" constant="67" id="abR-Op-wUV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xh2-fn-e3D" secondAttribute="trailing" constant="75" id="bzm-wV-yWv"/>
+                            <constraint firstItem="99T-KF-gWc" firstAttribute="top" secondItem="xh2-fn-e3D" secondAttribute="bottom" constant="23" id="eKh-Pt-er2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="99T-KF-gWc" secondAttribute="trailing" constant="75" id="kPt-Bd-3s2"/>
+                            <constraint firstItem="iRD-em-6QY" firstAttribute="leading" secondItem="fer-F2-Muq" secondAttribute="leadingMargin" constant="-16" id="xs4-gY-Rl9"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertLable" destination="gx5-xL-Mub" id="g7f-Sk-at5"/>
                         <outlet property="nameTextField" destination="xh2-fn-e3D" id="JxU-uz-LE4"/>
                         <outlet property="passwordTextField" destination="vaa-9Q-qCo" id="ynr-P1-5fa"/>
                         <outlet property="userTextField" destination="99T-KF-gWc" id="1ie-lz-84T"/>
@@ -144,6 +162,6 @@
     <resources>
         <image name="121585628.jpeg" width="500" height="699"/>
         <image name="ic_add_circle.png" width="24" height="24"/>
-        <image name="ic_keyboard_arrow_left.png" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_left_2x.png" width="48" height="48"/>
     </resources>
 </document>
