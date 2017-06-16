@@ -70,7 +70,18 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4WA-g4-e97"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Fill All Blank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7b-Cl-Ukn">
+                                <rect key="frame" x="89" y="432" width="197" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -79,6 +90,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d3p-ha-vWL" secondAttribute="bottom" id="zit-o2-eh1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="Y7b-Cl-Ukn" id="qg8-OF-1Ju"/>
+                        <outlet property="passwordTextField" destination="pke-2U-kO6" id="v5M-fe-VAx"/>
+                        <outlet property="userTextField" destination="ySv-k8-Nvr" id="TSX-uX-5mC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
